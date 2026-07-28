@@ -1,8 +1,9 @@
 :root{
     --primary-color: #EDEDED;
     --secondary-color: #000000;
-    --text-color: #A32035;
-    --link-color: #A32035;
+    --text-color: #000000;
+    --link-color: #000000;
+    --button-color: #A32035;
     --link-hover-color: #FFC629;
 }
 
@@ -59,7 +60,7 @@ a{
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 1px;
-    color: var(--text-color);
+    color: var(--button-color);
 }
 
 .nav-links{
@@ -69,7 +70,7 @@ a{
 }
 
 .nav-button{
-    background-color: var(--link-color);
+    background-color: var(--button-color);
     color: var(--secondary-color);
     border: none;
     padding: 10px 15px;
@@ -78,9 +79,28 @@ a{
     border-radius: 5px;
 }
 
-.nav-links a:hover{
+.nav-button:hover{
     background-color: var(--link-hover-color);
     box-shadow: 2px 2px 5px black;
+    transition: ease-in-out 0.3s;
+}
+
+.error-container{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.site-footer {
+    background-color: var(--button-color);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
