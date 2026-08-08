@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary-color: #EDEDED;
     --secondary-color: #000000;
     --text-color: #000000;
@@ -7,7 +7,7 @@
     --link-hover-color: #FFC629;
 }
 
-.dark-mode{
+.dark-mode {
     --primary-color: #1a3e6b;
     --secondary-color: #333;
     --text-color: #f4f4f4;
@@ -15,43 +15,41 @@
     --link-hover-color: #225d98;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family:  'Inter', Helvetica, Arial, sans-serif;
+body {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
     background-color: var(--primary-color);
     color: var(--text-color);
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
     color: var(--link-color);
 }
 
+/* Header Styles */
 .site-header {
     background-color: var(--primary-color);
     padding: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 10px 10px 10px;
     align-items: center;
     justify-content: space-between;
     display: flex;
     border-bottom: 2px solid var(--secondary-color);
-
-    
 }
 
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 15px
+    gap: 15px;
 }
-.mvhs-logo{
+
+.mvhs-logo {
     width: 90px;
     height: auto;
 }
@@ -61,15 +59,17 @@ a{
     font-weight: 900;
     letter-spacing: 1px;
     color: var(--button-color);
+    text-align: center;
 }
 
-.nav-links{
-
-    align-items: right;
-    padding: 10px;
+.nav-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.nav-button{
+.nav-button {
     background-color: var(--button-color);
     color: var(--secondary-color);
     border: none;
@@ -79,27 +79,182 @@ a{
     border-radius: 5px;
 }
 
-.nav-button:hover{
+.nav-button:hover {
     background-color: var(--link-hover-color);
     box-shadow: 2px 2px 5px black;
     transition: ease-in-out 0.3s;
 }
 
-.error-container{
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px;
+}
+
+.project,
+.project-reverse {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+
+.project-reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+.project-text h2 {
+    font-size: 28px;
+}
+
+.project-text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.project-image,
+.project-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img,
+.project-video video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.project-note-top {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+}
+
+.project-note-bottom {
     text-align: center;
     font-size: 24px;
-    margin-top: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+
+
+
+
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.about,
+.about-reverse {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+.about-reverse {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 30px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    border-bottom: 4px solid var(--button-color);
+    padding-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.about-image,
+.about-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img,
+.about-video video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+}
+
+.about-note-top {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .site-footer {
     background-color: var(--button-color);
     padding: 20px;
     text-align: center;
     margin-top: 20px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
@@ -109,3 +264,66 @@ a{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .projects-container {
+        padding: 20px;
+    }
+
+    .project,
+    .project-reverse {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-text {
+        text-align: center;
+    }
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(page-content) {
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+::view-transition-old(page-content) {
+    animation-name: slide-out;
+}
+
+::view-transition-new(page-content) {
+    animation-name: slide-in;
+}
+
+main {
+    view-transition-name: page-content;
+}
+
+@keyframes slide-out {
+    to {
+        translate: -100vw;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        translate: 100vw;
+    }
+}
