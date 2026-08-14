@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #EDEDED;
+    --primary-color: #ffffff;
     --secondary-color: #000000;
     --text-color: #000000;
     --link-color: #000000;
     --button-color: #A32035;
     --link-hover-color: #FFC629;
+    --MVHS-red: #ed2943;
+    --MVHS-gold: #fec72e;
 }
 
 .dark-mode {
@@ -19,6 +21,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 body {
@@ -36,11 +42,10 @@ a {
 .site-header {
     background-color: var(--primary-color);
     padding: 10px;
-    margin: 0 10px 10px 10px;
     align-items: center;
     justify-content: space-between;
     display: flex;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--button-color);
 }
 
 .logo-link {
@@ -98,7 +103,7 @@ a {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    border: 2px solid var(--secondary-color);
+    border: 3px solid var(--secondary-color);
     border-radius: 10px;
     background-color: var(--primary-color);
 }
@@ -144,6 +149,12 @@ a {
     border-radius: 10px;
 }
 
+.project-image:hover img,
+.project-video:hover video {
+    transform: scale(1.02);
+    transition: ease-in-out 0.3s;
+}
+
 .project-note-top {
     text-align: center;
     font-size: 50px;
@@ -164,6 +175,7 @@ a {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 
 
 
@@ -226,6 +238,11 @@ a {
     border-radius: 30px;
 }
 
+.about-image:hover{
+    transform: scale(1.02);
+    transition: ease-in-out 0.3s;
+}
+
 .about-note-top {
     text-align: center;
     font-size: 50px;
@@ -233,15 +250,218 @@ a {
     padding-top: 25px;
 }
 
+.hero {
+    height: 500px;
+    background: linear-gradient(
+        120deg,
+        var(--MVHS-red)  0%,
+        var(--MVHS-gold) 100%
+    );
+      clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 50px),
+    0 100%
+    );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 50px;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 0px;
+    font-weight: heavy;
+    opacity: 0.75;
+}
+
+.hero-content button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 15px 150px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.hero-content button:hover {
+    background-color: var(--link-hover-color);
+    box-shadow: 2px 2px 5px black;
+    transition: ease-in-out 0.3s;
+}
+
+.typed-wrap {
+  display: inline-block;
+  min-width: 11ch;
+}
+
+.hero h1 {
+  min-height: 1.3em;
+}
 
 
+.home-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
 
+.home,
+.home-reverse {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
 
+.home-reverse {
+    flex-direction: row-reverse;
+}
 
+.home-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: top;
+    padding: 30px;
+}
 
+.home-text h2 {
+    font-size: 28px;
+    border-bottom: 4px solid var(--button-color);
+    padding-bottom: 10px;
+}
 
+.home-text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
 
+.home-image,
+.home-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.home-image img,
+.home-video video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+}
+
+.home-image:hover{
+    transform: scale(1.02);
+    transition: ease-in-out 0.3s;
+}
+
+.home-note-top {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+.scroll-content-LR{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    transform: translateY(-22.5%)rotate(1.8882deg)
+}
+
+.scroll-content-RL{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    transform: translateY(-22.5%) rotate(-1.8882deg)
+}
+
+.gradient-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.gradient-section {
+    height: 150px;
+    background: linear-gradient(
+        120deg,
+        var(--MVHS-red)  0%,
+        var(--MVHS-gold) 100%
+    );
+      clip-path: polygon(
+        100% 50px,
+        0 0,
+        0 calc(100% - 50px),
+        100% 100%
+        
+    );
+}
+
+.gradient-section-reverse{
+    height: 150px;
+    background: linear-gradient(
+        120deg,
+        var(--MVHS-red)  0%,
+        var(--MVHS-gold) 100%
+    );
+      clip-path: polygon(
+        0 50px,
+        100% 0,
+        100% calc(100% - 50px),
+        0 100%
+        
+    );
+    
+
+}
+
+.gradient-section-bottom{
+    height: 300px;
+    background: linear-gradient(
+        120deg,
+        var(--MVHS-red)  0%,
+        var(--MVHS-gold) 100%
+    );
+      clip-path: polygon(
+           0 100%,
+        100% 100%,
+        100% 50px,
+        0 0
+        
+    );  
+}
+
+  
 
 
 
@@ -254,7 +474,6 @@ a {
     background-color: var(--button-color);
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
     width: 100%;
 }
 
@@ -285,7 +504,9 @@ a {
     }
 
     .project,
-    .project-reverse {
+    .project-reverse,
+    .about,
+    .about-reverse{
         flex-direction: column;
         gap: 10px;
     }
@@ -293,6 +514,27 @@ a {
     .project-text {
         text-align: center;
     }
+
+    .scroll-content-LR{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    transform: translateY(-22.5%)rotate(5.6646deg)
+    }
+
+    .scroll-content-RL{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    transform: translateY(-22.5%) rotate(-5.6646deg)
+    }
+
 }
 
 @view-transition {
