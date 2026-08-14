@@ -395,7 +395,7 @@ a {
     padding-top: 100px;
     padding-bottom: 50px;
     position: relative;
-    transform: translateY(-22.5%)rotate(1.8882deg)
+    transform: translateY(-20%) rotate(atan2(50px, 100vw));
 }
 
 .scroll-content-RL{
@@ -405,7 +405,7 @@ a {
     padding-top: 100px;
     padding-bottom: 50px;
     position: relative;
-    transform: translateY(-22.5%) rotate(-1.8882deg)
+    transform: translateY(-20%) rotate(atan2(-50px, 100vw));
 }
 
 .gradient-content h1 {
@@ -519,9 +519,45 @@ a {
 }
 
 
+.marquee {
+    width: 100%;
+    overflow: hidden;
+}
 
+.marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: marquee-left 75s linear infinite;
+}
 
+.marquee-track-2 {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: marquee-left 150s linear infinite;
+}
 
+.scroll-line {
+    flex: 0 0 auto;
+    margin: 0;
+    padding-right: 3rem;
+    white-space: nowrap;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+}
+
+.scroll-line-2 {
+    flex: 0 0 auto;
+    margin: 0;
+    padding-right: 3rem;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
 
 
 
@@ -589,7 +625,7 @@ a {
         padding-top: 100px;
         padding-bottom: 50px;
         position: relative;
-        transform: translateY(-22.5%)rotate(5.6646deg)
+        transform: translateY(-20%)rotate(atan2(50px, 100vw))
     }
 
     .scroll-content-RL{
@@ -599,7 +635,7 @@ a {
         padding-top: 100px;
         padding-bottom: 50px;
         position: relative;
-        transform: translateY(-22.5%) rotate(-5.6646deg)
+        transform: translateY(-20%) rotate(atan2(-50px, 100vw))
     }
 
 }
@@ -635,4 +671,14 @@ main {
     from {
         translate: 100vw;
     }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
