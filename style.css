@@ -24,10 +24,14 @@
 }
 
 html, body {
+    height: 100%;
     overflow-x: hidden;
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Inter', Helvetica, Arial, sans-serif;
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -36,6 +40,10 @@ body {
 a {
     text-decoration: none;
     color: var(--link-color);
+}
+
+main{
+    flex: 1;
 }
 
 /* Header Styles */
@@ -544,6 +552,40 @@ a {
     letter-spacing: 1px;
 }
 
+.error-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.error{
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .site-footer {
     background-color: var(--button-color);
     padding: 20px;
@@ -673,6 +715,7 @@ a {
 }
 
 main {
+
     view-transition-name: page-content;
 }
 
