@@ -584,17 +584,36 @@ main{
 
 
 
+/* site footer */
 
-
-.site-footer {
+.site-footer{
     background-color: var(--button-color);
+    display: flex;
     padding: 20px;
-    text-align: center;
     width: 100%;
+    align-items: center;
 }
 
+.copyright{
+    align-content: left;
+}
 
+.doners{
+    margin-left: auto;
+    text-align: center;
+}
 
+.sponsor-logo{
+    max-height: 50px;
+    padding: 2px;
+
+}
+
+.team-member{
+
+}
+
+.
 
 
 
