@@ -354,14 +354,14 @@ main{
 }
 
 .home-text h2 {
-    font-size: 40px;
+    font-size: 48px;
     border-bottom: 4px solid var(--button-color);
     padding-bottom: 10px;
     font-weight: bold;
 }
 
 .home-text p {
-    font-size: 33px;
+    font-size: 24px;
     line-height: 1.5;
 }
 
@@ -598,25 +598,75 @@ main{
     align-content: left;
 }
 
-.doners{
+
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 90vw;
+    margin: 30px auto 0;
+    padding: 0 20px 30px;
+}
+
+.team-member {
+    padding: 25px 0;
+    text-align: center;
+    border: 2px solid var(--button-color);
+}
+
+.member-img {
+    width: 90%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 70px;
+}
+
+.member-text {
+    padding: 5px;
+    text-align: center;
+}
+
+.member-text h2{
+    font-size: 30px;
+}
+
+.member-text p {
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+.link-logos img {
+    width: 40px;
+    height: 40px;
+    margin: 8px 4px 0;
+}
+
+/* site footer */
+
+.site-footer {
+    background-color: var(--button-color);
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.copyright {
+    align-content: left;
+}
+
+.doners {
     margin-left: auto;
     text-align: center;
 }
 
-.sponsor-logo{
+.sponsor-logo {
     max-height: 50px;
     padding: 2px;
 
 }
-
-.team-member{
-
-}
-
-.
-
-
-
 
 
 
@@ -627,6 +677,18 @@ main{
 
 
 @media (max-width: 1000px) {
+
+    .home-text h2 {
+        font-size: 35px;
+        border-bottom: 4px solid var(--button-color);
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .home-text p {
+        font-size: 24px;
+        line-height: 1.5;
+    }
 
     .hero-content h1 {
     font-size: 35px;
