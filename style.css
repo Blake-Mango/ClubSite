@@ -68,11 +68,18 @@ main{
 }
 
 .mvhs-text {
+    padding-left: 10px;
     font-size: 20px;
     font-weight: 900;
     letter-spacing: 1px;
     color: var(--button-color);
     text-align: center;
+    transition: transform 0.3s ease
+}
+
+.mvhs-text:hover{
+    transform: scale(1.1);
+
 }
 
 .nav-links {
@@ -133,6 +140,11 @@ main{
 
 .project-text h2 {
     font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.project-text h2:hover{
+    transform: scale(1.15);
 }
 
 .project-text p {
@@ -363,6 +375,11 @@ main{
 .home-text p {
     font-size: 24px;
     line-height: 1.5;
+}
+
+.home-text strong{
+    text-align: center;
+    font-size: 24px;
 }
 
 .home-image,
@@ -602,23 +619,27 @@ main{
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 50px 30px;
     max-width: 90vw;
     margin: 30px auto 0;
-    padding: 0 20px 30px;
+    padding: 0 20px;
 }
 
 .team-member {
-    padding: 25px 0;
+    min-width: 0;
+    margin: 0 25px;
     text-align: center;
 }
 
 .member-img {
-    max-height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
     display: block;
     margin: 0 auto;
-    border-radius: 100px;
+    border-radius: 120px;
     box-shadow: 2px 2px 15px black;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -646,6 +667,12 @@ main{
     width: 40px;
     height: 40px;
     margin: 8px 4px 0;
+    transition: transform 0.3s ease;
+}
+
+.link-logos img:hover{
+    transform: scale(1.15);
+    
 }
 
 /* site footer */
