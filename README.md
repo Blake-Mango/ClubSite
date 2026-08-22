@@ -1,2 +1,2 @@
 # ClubSite
-A club website that I'm making to try and show off the projects we've all made.
+This is a website that i made for the Hack Club Stardance program, and its porpus is for it to hopfully engage people in my school to at least look into joining the engineering/Hack Club i'm starting this year.
